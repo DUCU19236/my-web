@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>欢迎来到我的网站</h1>
+        <p>点击模块按钮，查看效果！</p>
+    </header>
+
+    <main>
+        <!-- 模块 1 -->
+        <div class="module" id="module1">
+            <h2>模块 1</h2>
+            <button onclick="changeModule(1)">改变背景颜色</button>
+        </div>
+
+        <!-- 模块 2 -->
+        <div class="module" id="module2">
+            <h2>模块 2</h2>
+            <button onclick="changeModule(2)">改变文字内容</button>
+        </div>
+
+        <!-- 模块 3 -->
+        <div class="module" id="module3">
+            <h2>模块 3</h2>
+            <button onclick="changeModule(3)">显示/隐藏模块</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 我的简单网页</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
