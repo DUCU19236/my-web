@@ -1,24 +1,8 @@
-/* 全局样式 */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    position: relative;
-    height: 300px;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-}
-
-.background-video {
+/* 全屏背景视频 */
+#fullscreen-video {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 100vh; /* 高度占据整个视窗 */
     overflow: hidden;
 }
 
@@ -28,40 +12,59 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
 }
 
-.header-text h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.header-text {
     position: absolute;
-    top: 10px; /* 标题放置在顶部 */
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
     z-index: 1;
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .header-text p {
-    margin: 0;
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: 10px; /* 小字放置在背景视频底部 */
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 1.5rem;
+    margin: 10px 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    z-index: 1;
 }
 
-/* 模块布局 */
+#scroll-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#scroll-button:hover {
+    background-color: #555;
+}
+
+/* 模块内容样式 */
+#main-content {
+    display: none; /* 初始隐藏 */
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
 .module-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 2rem;
 }
 
 .module {
@@ -71,10 +74,8 @@ header {
     padding: 1rem;
     width: 40%;
     text-align: center;
-    margin: 0 auto;
-    transition: all 0.3s ease;
-    cursor: pointer;
     border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .module img {
@@ -92,16 +93,4 @@ header {
 .module p {
     color: #666;
     margin-bottom: 0.5rem;
-}
-
-.module:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #ddd;
-    margin-top: 2rem;
 }
