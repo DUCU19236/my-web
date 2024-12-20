@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <!-- 音频播放器（隐藏） -->
+    <div style="display: none;">
+        <iframe 
+            frameborder="no" 
+            border="0" 
+            marginwidth="0" 
+            marginheight="0" 
+            width="330" 
+            height="86" 
+            src="//music.163.com/outchain/player?type=2&id=1844680639&auto=1&height=66">
+        </iframe>
+    </div>
+
     <!-- 全屏背景视频部分 -->
     <section id="fullscreen-video">
         <div class="background-video">
@@ -16,7 +29,7 @@
             </video>
             <div class="header-text">
                 <h1>欢迎来到刘豪的网页</h1>
-                <p>点击下方按钮，查看我的故事！</p>
+                <p>        </p>
                 <button id="scroll-button">进入</button>
             </div>
         </div>
@@ -26,7 +39,7 @@
     <main id="main-content">
         <div class="module-container">
             <!-- 模块 1 -->
-            <div class="module">
+            <div class="module" onclick="location.href='./悟道.html';">
                 <img src="./images/module1.jpg" alt="悟道">
                 <h2>悟道</h2>
                 <p>我的哲学思考</p>
