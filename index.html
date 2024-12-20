@@ -4,74 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>刘豪的个人网页</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <!-- 背景音乐 -->
-    <audio id="background-music" autoplay loop>
-        <source src="background-music.mp3" type="audio/mpeg">
-        您的浏览器不支持音频播放。
-    </audio>
-
-    <!-- 头部模块 -->
-    <header>
+    <!-- 全屏背景视频部分 -->
+    <section id="fullscreen-video">
         <div class="background-video">
             <video autoplay muted loop>
-                <source src="kaitou.mp4" type="video/mp4">
+                <source src="./kaitou.mp4" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <div class="header-text">
                 <h1>欢迎来到刘豪的网页</h1>
-                <p>点击模块按钮，查看我的故事！</p>
+                <p>点击下方按钮，查看我的故事！</p>
+                <button id="scroll-button">进入</button>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- 四个模块 -->
-    <main>
+    <!-- 模块内容部分 -->
+    <main id="main-content">
         <div class="module-container">
             <!-- 模块 1 -->
-            <div class="module" onclick="location.href='module1.html';">
-                <img src="images/module1.jpg" alt="悟道">
+            <div class="module">
+                <img src="./images/module1.jpg" alt="悟道">
                 <h2>悟道</h2>
                 <p>我的哲学思考</p>
             </div>
 
             <!-- 模块 2 -->
-            <div class="module" onclick="location.href='module2.html';">
-                <img src=".images/module2.jpg" alt="习练">
+            <div class="module">
+                <img src="./images/module2.jpg" alt="习练">
                 <h2>习练</h2>
                 <p>我的学习与训练</p>
             </div>
 
             <!-- 模块 3 -->
-            <div class="module" onclick="location.href='module3.html';">
-                <img src="images/module3.jpg" alt="未来">
+            <div class="module">
+                <img src="./images/module3.jpg" alt="未来">
                 <h2>未来</h2>
                 <p>我的未来规划</p>
             </div>
 
             <!-- 模块 4 -->
-            <div class="module" onclick="location.href='module4.html';">
-                <img src="images/module4.jpg" alt="告老">
+            <div class="module">
+                <img src="./images/module4.jpg" alt="告老">
                 <h2>告老</h2>
                 <p>我的人生总结</p>
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>© 2024 刘豪的个人网页</p>
-    </footer>
-
-    <!-- 自动播放背景音乐 -->
-    <script>
-        window.onload = () => {
-            const audio = document.getElementById('background-music');
-            audio.play().catch(error => {
-                console.error('背景音乐无法自动播放，用户需要手动允许：', error);
-            });
-        };
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
