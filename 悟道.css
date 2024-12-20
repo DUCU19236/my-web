@@ -44,60 +44,46 @@ body {
 
 .butterfly {
     position: fixed;
-    width: 50px;
-    animation: fly 10s linear infinite;
+    width: 40px;
+    animation: fly1 10s linear infinite;
     z-index: 100;
+    pointer-events: none;
 }
 
-@keyframes fly {
+@keyframes fly1 {
     0% {
-        transform: translateX(-10vw) translateY(100vh) rotate(0deg);
+        transform: translate(0, 100vh) rotate(0deg);
+    }
+    25% {
+        transform: translate(30vw, 50vh) rotate(90deg);
     }
     50% {
-        transform: translateX(50vw) translateY(-50vh) rotate(180deg);
+        transform: translate(60vw, 10vh) rotate(180deg);
+    }
+    75% {
+        transform: translate(90vw, 50vh) rotate(270deg);
     }
     100% {
-        transform: translateX(90vw) translateY(100vh) rotate(360deg);
+        transform: translate(100vw, 100vh) rotate(360deg);
     }
 }
 
-.content {
-    padding: 20px;
+@keyframes fly2 {
+    0% {
+        transform: translate(100vw, 100vh) rotate(0deg);
+    }
+    25% {
+        transform: translate(70vw, 40vh) rotate(120deg);
+    }
+    50% {
+        transform: translate(40vw, 20vh) rotate(240deg);
+    }
+    75% {
+        transform: translate(10vw, 40vh) rotate(360deg);
+    }
+    100% {
+        transform: translate(0, 100vh) rotate(480deg);
+    }
 }
 
-.person-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.person {
-    background: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.person img {
-    width: 100%;
-    height: auto;
-}
-
-.person h2 {
-    margin: 15px 0 10px;
-    font-size: 1.5em;
-    color: black;
-}
-
-.person p {
-    font-size: 1em;
-    margin: 10px 0;
-    color: black;
-}
-
-.person button {
-    padding: 10px 20px;
-    background: #f57c00;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+/* 添加更多动画 */
